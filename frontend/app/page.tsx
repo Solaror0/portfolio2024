@@ -2,7 +2,13 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import Image from "next/image";
-import ParticlesBackground from "../components/ParticlesBackground";
+//import ParticlesBackground from "../components/ParticlesBackground";
+import dynamic from "next/dynamic";
+
+const ParticlesBackground = dynamic(
+  () => import("../components/ParticlesBackground"),
+  { ssr: false }
+);
 
 export default function Home() {
   const listOfTitles = [

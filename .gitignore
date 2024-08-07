@@ -50,7 +50,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
+# ## secret key ASU123ISADIUH259
 # Translations
 *.mo
 *.pot

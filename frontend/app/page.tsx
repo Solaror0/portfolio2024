@@ -5,13 +5,13 @@ import Image from "next/image";
 import ParticlesBackground from "../components/ParticlesBackground";
 
 export default function Home() {
-  function TitleSwitch() {
-    const listOfTitles = [
-      "A Highschool Student.",
-      "A Web Developer",
-      "An Aspiring Engineer",
-    ];
+  const listOfTitles = [
+    "A Highschool Student.",
+    "A Web Developer",
+    "An Aspiring Engineer",
+  ];
 
+  function TitleSwitch() {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {

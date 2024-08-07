@@ -56,7 +56,7 @@ export default function Home() {
             <div className="z-20 relative">
               <button
                 onClick={scrollToSection}
-                className="z-20 lg:text-3xl md:text-2xl text-xl bg-slate-100 rounded-sm p-3 pt-2 pb-2 mt-8 hover:text-purple-800 transition-all duration-500 "
+                className="z-20 lg:text-3xl text-gray-900 md:text-2xl text-xl bg-slate-100 rounded-sm p-3 pt-2 pb-2 mt-8 hover:text-purple-800 transition-all duration-500 "
               >
                 Learn About Me
               </button>

@@ -1,5 +1,14 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import {
+  useEffect,
+  useState,
+  useRef,
+  AwaitedReactNode,
+  JSXElementConstructor,
+  ReactElement,
+  ReactNode,
+  ReactPortal,
+} from "react";
 import axios from "axios";
 import Image from "next/image";
 //import ParticlesBackground from "../components/ParticlesBackground";
@@ -40,6 +49,14 @@ export default function Home() {
     }
   };
 
+  function SkillBox(props: { skillText: string | number }) {
+    return (
+      <div className="w-fit h-fit text-gray-900 bg-slate-100 rounded-md px-2 m-0 py-1 hover:py-2 hover:px-3 transition-all">
+        {props.skillText}
+      </div>
+    );
+  }
+
   // RETURN SECTION
   return (
     <div>
@@ -72,9 +89,7 @@ export default function Home() {
           ref={targetRef}
           className="w-full max-w-5xl min-h-screen items-center justify-between mt-20 font-semibold text-white"
         >
-          <div className="pt-32 px-1 lg:px-5 grid h-full lg:grid-cols-2 gap-4 lg:gap-4">
-            <div className="border-slate-100 border-8 h-64 md:h-80 lg:h-full rounded-tl-2xl rounded-bl-2xl"></div>
-
+          <div className="pt-32 px-1 lg:px-5 grid h-full grid-rows-2 lg:grid-cols-2 gap-4 lg:gap-4">
             <div className="bg-slate-100 md:h-fit ">
               <div className="pt-8 p-4 pl-6 text-3xl text-gray-900 font-extrabold">
                 About Me
@@ -146,7 +161,44 @@ export default function Home() {
               </div>
 
               <div className="p-4 pl-6 text-3xl text-gray-900 font-extrabold text-right hover:text-purple-800 transition-colors duration-500">
-                go to My Skills
+                go to My Projects
+              </div>
+            </div>
+            <div className="border-slate-100 border-8 rounded-tl-2xl rounded-bl-2xl ">
+              <div className="pt-8 p-4 pl-6 text-3xl text-slate-200 font-extrabold">
+                Skills
+              </div>
+              <div className="pt-1  pl-6 text-xl text-slate-200 font-bold">
+                Programming
+              </div>
+              <div className="flex flex-wrap gap-2 my-3 text-md md:text-lg pt-1 p-3 pl-6 pb-1">
+                <SkillBox skillText="Python" />
+                <SkillBox skillText="Java" />
+                <SkillBox skillText="Flask" />
+                <SkillBox skillText="TailwindCSS" />
+                <SkillBox skillText="JavaScript" />
+                <SkillBox skillText="React.js" />
+                <SkillBox skillText="HTML" />
+                <SkillBox skillText="CSS" />
+                <SkillBox skillText="Arduino" />
+                <SkillBox skillText="Android Studio" />
+              </div>
+              <div className="pt-0 pl-6 text-xl text-slate-200 font-bold">
+                Tools & Software
+              </div>
+              <div className="flex flex-wrap gap-2 my-3 text-md md:text-lg pt-0 p-4 pl-6 ">
+                <SkillBox skillText="VSCode" />
+                <SkillBox skillText="Git" />
+                <SkillBox skillText="GitHub" />
+                <SkillBox skillText="IntelliJ IDEA" />
+                <SkillBox skillText="Figma" />
+                <SkillBox skillText="Canva" />
+                <SkillBox skillText="Photoshop" />
+                <SkillBox skillText="DaVinci Resolve" />
+                <SkillBox skillText="Filmora" />
+                <SkillBox skillText="GSuite" />
+                <SkillBox skillText="Microsoft Office" />
+                <SkillBox skillText="WordPress" />
               </div>
             </div>
           </div>

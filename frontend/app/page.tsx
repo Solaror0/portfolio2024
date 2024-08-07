@@ -75,10 +75,10 @@ export default function Home() {
               </div>
 
               <div className="p-4 pl-6 pr-8 text-lg text-gray-950 font-normal">
-                Hey! My name is Jun Nur Mustaqeem. I'm a Grade 12 student from
-                Toronto! I'm passionate about software and hardware development
-                on all spectrums, and I also enjoy getting myself involved
-                outside of programming.
+                Hey! My name is Jun Nur Mustaqeem. I&apos;m a Grade 12 student
+                from Toronto! I&apos;m passionate about software and hardware
+                development on all spectrums, and I also enjoy getting myself
+                involved outside of programming.
               </div>
 
               <div className="grid grid-cols-2 m-3 gap-2 p-4 text-lg text-black ">

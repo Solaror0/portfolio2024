@@ -73,7 +73,7 @@ export default function Home() {
           className="w-full max-w-5xl min-h-screen items-center justify-between mt-20 font-semibold text-white"
         >
           <div className="pt-32 px-1 lg:px-5 grid h-full lg:grid-cols-2 gap-4 lg:gap-4">
-            <div className="border-slate-100 border-8 h-64 md:h-full rounded-tl-2xl rounded-bl-2xl"></div>
+            <div className="border-slate-100 border-8 h-64 md:h-80 lg:h-full rounded-tl-2xl rounded-bl-2xl"></div>
 
             <div className="bg-slate-100 md:h-fit ">
               <div className="pt-8 p-4 pl-6 text-3xl text-gray-900 font-extrabold">

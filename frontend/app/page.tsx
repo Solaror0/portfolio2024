@@ -60,10 +60,10 @@ export default function Home() {
   // RETURN SECTION
   return (
     <div>
-      <main className="flex min-h-screen flex-col items-center p-12 bg-[#17082A] z-10">
+      <main className="flex min-h-screen flex-col items-center p-12 to-[#191024] via-[#150723] from-[#221331] bg-gradient-to-b  z-10">
         <div className="h-screen max-h-screen">
-          <div className="w-full max-w-5xl items-center justify-between text-center pt-36 font-semibold">
-            <div className="text-center text-slate-50 text-3xl 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-6xl">
+          <div className="w-full max-w-5xl h-full items-center justify-between text-center pt-36 font-semibold">
+            <div className="text-center text-slate-50 text-3xl 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-6xl pt-10">
               Hey, I&apos;m Jun Nur.
             </div>
             <div className="text-center text-slate-50 text-xl pt-4 md:pt-8 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl">
@@ -87,9 +87,9 @@ export default function Home() {
 
         <div
           ref={targetRef}
-          className="w-full max-w-5xl min-h-screen items-center justify-between mt-20 font-semibold text-white"
+          className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-20 font-semibold text-white"
         >
-          <div className="pt-32 px-1 lg:px-5 grid h-full grid-rows-2 lg:grid-cols-2 gap-4 lg:gap-4">
+          <div className="pt-32 px-1 lg:px-5 grid  grid-rows-2 grid-cols-none lg:grid-cols-2 lg:grid-rows-none gap-4 lg:gap-4">
             <div className="bg-slate-100 md:h-fit ">
               <div className="pt-8 p-4 pl-6 text-3xl text-gray-900 font-extrabold">
                 About Me

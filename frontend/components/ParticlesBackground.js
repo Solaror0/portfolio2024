@@ -6,48 +6,66 @@ const ParticlesBackground = () => {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 80,
+          value: 200,
           density: {
             enable: true,
-            value_area: 800,
+            value_area: 450,
           },
         },
         color: {
-          value: "#ffffff",
+          value: "#976aa0",
         },
         shape: {
-          type: "circle",
+          type: "triangle",
+          stroke: {
+            width: 0,
+            color: "#976aa0",
+          },
         },
         opacity: {
-          value: 0.5,
-          random: false,
+          value: 0.2,
+          // random: false,
+          // anim: {
+          //   enable: false,
+          //   speed: 1,
+          //   opacity_min: 0.1,
+          //   sync: false,
+          // },
+          random: true,
           anim: {
-            enable: false,
+            enable: true,
             speed: 1,
-            opacity_min: 0.1,
+            opacity_min: 0.3,
             sync: false,
           },
         },
         size: {
-          value: 3,
+          value: 2,
+          // random: true,
+          // anim: {
+          //   enable: false,
+          //   speed: 40,
+          //   size_min: 0.1,
+          //   sync: false,
+          // },
           random: true,
           anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
+            enable: true,
+            speed: 5,
+            size_min: 0.4,
             sync: false,
           },
         },
         line_linked: {
           enable: true,
           distance: 150,
-          color: "#ffffff",
-          opacity: 0.4,
+          color: "#976aa0",
+          opacity: 0.1,
           width: 1,
         },
         move: {
           enable: true,
-          speed: 6,
+          speed: 1,
           direction: "none",
           random: false,
           straight: false,
@@ -65,7 +83,7 @@ const ParticlesBackground = () => {
         events: {
           onhover: {
             enable: true,
-            mode: "grab",
+            mode: ["bubble", "grab"], // Enable both grab and color change on hover
           },
           onclick: {
             enable: true,
@@ -75,16 +93,25 @@ const ParticlesBackground = () => {
         },
         modes: {
           grab: {
-            distance: 200,
+            distance: 100,
             line_linked: {
               opacity: 1,
+              color: "#976aa0",
             },
           },
+          color: {
+            value: "#976aa0", // Color to change to on hover
+            // animation: {
+            //   enable: true,
+            //   speed: 20,
+            //   sync: false,
+            // },
+          },
           bubble: {
-            distance: 250,
-            size: 0,
+            distance: 400,
+            size: 2.1,
             duration: 2,
-            opacity: 0.8,
+            opacity: 0.6,
             speed: 3,
           },
           repulse: {

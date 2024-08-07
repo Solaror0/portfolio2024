@@ -41,7 +41,7 @@ export default function Home() {
         <div className="h-screen max-h-screen">
           <div className="w-full max-w-5xl items-center justify-between text-center pt-36 font-semibold">
             <div className="text-center text-slate-50 text-4xl 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-6xl">
-              Hey, I'm Jun Nur.
+              Hey, I&apos;m Jun Nur.
             </div>
             <div className="text-center text-slate-50 text-2xl pt-8 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl">
               <TitleSwitch />

@@ -21,7 +21,7 @@ export default function Home() {
       }, 3000);
       // Cleanup interval on component unmount
       return () => clearInterval(intervalId);
-    }, [index]);
+    }, [index, listOfTitles.length]);
 
     return <div>{listOfTitles[index]}</div>;
   }

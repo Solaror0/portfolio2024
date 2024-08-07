@@ -21,7 +21,8 @@ export default function Home() {
       }, 3000);
       // Cleanup interval on component unmount
       return () => clearInterval(intervalId);
-    }, [index, listOfTitles.length]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return <div>{listOfTitles[index]}</div>;
   }

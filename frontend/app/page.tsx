@@ -46,10 +46,10 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center p-12 bg-[#17082A] z-10">
         <div className="h-screen max-h-screen">
           <div className="w-full max-w-5xl items-center justify-between text-center pt-36 font-semibold">
-            <div className="text-center text-slate-50 text-4xl 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-6xl">
+            <div className="text-center text-slate-50 text-3xl 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-6xl">
               Hey, I&apos;m Jun Nur.
             </div>
-            <div className="text-center text-slate-50 text-2xl pt-8 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl">
+            <div className="text-center text-slate-50 text-xl pt-4 md:pt-8 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl">
               <TitleSwitch />
             </div>
 
@@ -72,22 +72,22 @@ export default function Home() {
           ref={targetRef}
           className="w-full max-w-5xl min-h-screen items-center justify-between mt-20 font-semibold text-white"
         >
-          <div className="pt-32 px-5 grid grid-cols-2 gap-4">
-            <div className="border-slate-100 border-8  rounded-tl-2xl rounded-bl-2xl h-full"></div>
+          <div className="pt-32 px-1 lg:px-5 grid h-full lg:grid-cols-2 gap-4 lg:gap-4">
+            <div className="border-slate-100 border-8 h-64 md:h-full rounded-tl-2xl rounded-bl-2xl"></div>
 
-            <div className="bg-slate-100 h-fit">
+            <div className="bg-slate-100 md:h-fit ">
               <div className="pt-8 p-4 pl-6 text-3xl text-gray-900 font-extrabold">
                 About Me
               </div>
 
-              <div className="p-4 pl-6 pr-8 text-lg text-gray-950 font-normal">
+              <div className="p-4 pl-6 pr-8 text-sm md:text-lg text-gray-950 font-normal">
                 Hey! My name is Jun Nur Mustaqeem. I&apos;m a Grade 12 student
                 from Toronto! I&apos;m passionate about software and hardware
                 development on all spectrums, and I also enjoy getting myself
                 involved outside of programming.
               </div>
 
-              <div className="grid grid-cols-2 m-3 gap-2 p-4 text-lg text-black ">
+              <div className="grid grid-cols-2 m-3 gap-2 p-4 text-xs md:text-lg text-black ">
                 <a href="/Jun Nur Mustaqeem Resume 2024.pdf">
                   <div className="flex p-4 bg-slate-200 font-normal w-full h-full rounded-lg hover:bg-slate-300 hover:p-5 transition-all duration-300 items-center">
                     <div className="h-8 w-8 relative flex-shrink mr-3">

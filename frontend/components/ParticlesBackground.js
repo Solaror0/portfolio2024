@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "particles.js/particles";
-const particlesJS = window.particlesJS;
+import "particles.js";
+//const particlesJS = window.particlesJS;
 
 const ParticlesBackground = () => {
   useEffect(() => {

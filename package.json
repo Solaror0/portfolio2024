@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "particles.js": "^2.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss-3d": "^1.0.6"
   }
 }

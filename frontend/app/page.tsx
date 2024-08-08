@@ -57,6 +57,46 @@ export default function Home() {
     );
   }
 
+  function ProjectBox(props: {
+    projectTitle: string | number;
+    bodyText: string | number;
+    imageURL: string;
+    dateText: string | number;
+    linkURL: string;
+  }) {
+    return (
+      <div className="p-3 pt-6 pb-6">
+        <div className="w-full h-fit bg-slate-100 rounded-md">
+          <div className="font-ttChoc text-gray-900 text-3xl p-4 pb-0">
+            {props.projectTitle}
+          </div>
+          <div className="text-gray-900 text-lg pl-4 pb-2 pt-0 font-medium">
+            {props.dateText}
+          </div>
+          <div className="p-4 w-full text-gray-900 text-sm break-words">
+            <div className="float-left mr-4 mb-2 w-32 h-auto">
+              <Image
+                src={props.imageURL} // Replace with your image path
+                alt="Description of image"
+                width={100}
+                height={100}
+                layout="responsive"
+                className="rounded-md"
+              />
+            </div>
+            <p className="leading-relaxed font-normal">{props.bodyText}</p>
+          </div>
+
+          <div className="px-3 pb-5 text-gray-900 font-ttChoc text-2xl hover:px-4 hover:text-purple-800 transition-all duration-200">
+            <a href={props.linkURL} target="_blank" rel="noopener noreferrer">
+              Learn More &gt;
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // RETURN SECTION
   return (
     <div>
@@ -201,6 +241,67 @@ export default function Home() {
                 <SkillBox skillText="WordPress" />
               </div>
             </div>
+          </div>
+        </div>
+
+        <div
+          // ref={projectRef}
+          className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-20 font-semibold text-white"
+        >
+          <div className="pt-8 p-4 pl-6 text-6xl pb-12 text-slate-200 font-ttChoc">
+            Projects
+          </div>
+
+          <div className="w-full h-[26rem] from-[#21122f] transition-all hover:border-purple-800 hover:border-2 to-[#241634] bg-gradient-to-br t-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-auto overflow-y-scroll">
+            <ProjectBox
+              projectTitle="Hack the Skies"
+              bodyText="Hack the Skies is a hackathon of my own founding, led by a team of highschool students! We want to bring highschool students into the tech community. We're happening October 2024, check us out!"
+              dateText="Since October 2023"
+              imageURL="/HackTheSkiesLogoBlue.png"
+              linkURL="https://hacktheskies.com"
+            />
+            <ProjectBox
+              projectTitle="Identibear"
+              bodyText="Identibear is a memory companion for dementia and prognopasia patients! Using a CNN, it detects who the user is talking to and outputs details in an earbud. It's also easily customizable on a web app."
+              dateText="Made at Hack The 6ix 2024"
+              imageURL="/HackTheSkiesLogoBlue.png"
+              linkURL="https://devpost.com/software/identibear-your-memory-companion"
+            />
+            <ProjectBox
+              projectTitle="Cycle"
+              bodyText="Cycle is an Android Studio App that lets the user cycle through the day, leaving notes, to-do lists, and alarms!"
+              dateText="Made June 2024"
+              imageURL="/HackTheSkiesLogoBlue.png"
+              linkURL="https://github.com/Solaror0/Cycle_APP/tree/main"
+            />
+            <ProjectBox
+              projectTitle="Air DJ"
+              bodyText="Air DJ is an instrument that allows the user to control Ableton Midi Values using pressure sensors, and change the pitch through an ultrasonic sensor distance, creating a DJ experience in the air!"
+              dateText="Made at Hack The North 2023"
+              imageURL="/HackTheSkiesLogoBlue.png"
+              linkURL="https://devpost.com/software/air-dj-2r3nw9"
+            />
+            <ProjectBox
+              projectTitle="Handibrake"
+              bodyText="A mission statement: a girl in India suffering from leprosy uses her bike to travel through the roads of Mumbai. Create an accessible way of braking to allow her to safely travel. Watch the video linked below!"
+              dateText="Made December 2023"
+              imageURL="/HackTheSkiesLogoBlue.png"
+              linkURL="https://www.youtube.com/watch?v=alz2EUx-i6A"
+            />
+            <ProjectBox
+              projectTitle="EmpowerU"
+              bodyText="A web app allowing employers and employees to connect, prioritizing workflow, transparancy, and boasting built-in mental health functions for employees. EmpowerU goes beyond the standard work app with its accessible usage and design."
+              dateText="Made at Hack the 6ix 2023"
+              imageURL="/HackTheSkiesLogoBlue.png"
+              linkURL="https://devpost.com/software/empoweru-dwiz25"
+            />
+            <ProjectBox
+              projectTitle="Penguin ISU"
+              bodyText="An Independent Study Unit on penguins! A web app that walks the user through Emperor Penguins with information and minigames!"
+              dateText="Made December 2024"
+              imageURL="/HackTheSkiesLogoBlue.png"
+              linkURL="https://penguinisu.vercel.app/"
+            />
           </div>
         </div>
       </main>

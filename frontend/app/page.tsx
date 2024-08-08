@@ -62,8 +62,8 @@ export default function Home() {
     <div>
       <main className="flex min-h-screen flex-col items-center p-12 to-[#191024] via-[#150723] from-[#221331] bg-gradient-to-b  z-10">
         <div className="h-screen max-h-screen">
-          <div className="w-full max-w-5xl h-full items-center justify-between text-center pt-36 font-semibold">
-            <div className="text-center text-slate-50 text-3xl 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-6xl pt-10">
+          <div className="w-full max-w-5xl h-full items-center justify-between text-center pt-36 font-ttChoc">
+            <div className="text-center text-slate-50 text-4xl 2xl:text-9xl xl:text-9xl lg:text-8xl md:text-7xl pt-10 font-ttChoc">
               Hey, I&apos;m Jun Nur.
             </div>
             <div className="text-center text-slate-50 text-xl pt-4 md:pt-8 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl">
@@ -91,7 +91,7 @@ export default function Home() {
         >
           <div className="pt-32 px-1 lg:px-5 grid  grid-rows-2 grid-cols-none lg:grid-cols-2 lg:grid-rows-none gap-4 lg:gap-4">
             <div className="bg-slate-100 md:h-fit ">
-              <div className="pt-8 p-4 pl-6 text-3xl text-gray-900 font-extrabold">
+              <div className="pt-8 p-4 pl-6 text-3xl text-gray-900 font-ttChoc">
                 About Me
               </div>
 
@@ -160,15 +160,15 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="p-4 pl-6 text-3xl text-gray-900 font-extrabold text-right hover:text-purple-800 transition-colors duration-500">
+              <div className="p-4 pl-6 text-3xl text-gray-900 font-ttChoc text-right hover:text-purple-800 transition-colors duration-500">
                 go to My Projects
               </div>
             </div>
             <div className="border-slate-100 border-8 rounded-tl-2xl rounded-bl-2xl ">
-              <div className="pt-8 p-4 pl-6 text-3xl text-slate-200 font-extrabold">
+              <div className="pt-8 p-4 pl-6 text-3xl text-slate-200 font-ttChoc">
                 Skills
               </div>
-              <div className="pt-1  pl-6 text-xl text-slate-200 font-bold">
+              <div className="pt-1  pl-6 text-xl text-slate-200 font-ttChoc">
                 Programming
               </div>
               <div className="flex flex-wrap gap-2 my-3 text-md md:text-lg pt-1 p-3 pl-6 pb-1">
@@ -183,7 +183,7 @@ export default function Home() {
                 <SkillBox skillText="Arduino" />
                 <SkillBox skillText="Android Studio" />
               </div>
-              <div className="pt-0 pl-6 text-xl text-slate-200 font-bold">
+              <div className="pt-0 pl-6 text-xl text-slate-200 font-ttChoc">
                 Tools & Software
               </div>
               <div className="flex flex-wrap gap-2 my-3 text-md md:text-lg pt-0 p-4 pl-6 ">

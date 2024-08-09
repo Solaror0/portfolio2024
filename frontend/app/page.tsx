@@ -106,14 +106,14 @@ export default function Home() {
             <div className="text-center text-slate-50 text-4xl 2xl:text-9xl xl:text-9xl lg:text-8xl md:text-7xl pt-10 font-ttChoc">
               Hey, I&apos;m Jun Nur.
             </div>
-            <div className="text-center text-slate-50 text-xl pt-4 md:pt-8 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl">
+            <div className="text-center text-slate-50 from-[#a150de] via-[#5f16a5] to-[#390072] text-xl p-4 transition-transform bg-gradient-to-br transform duration-100 mt-4 md:mt-8 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl w-fit mx-auto rounded-md ">
               <TitleSwitch />
             </div>
 
             <div className="z-20 relative">
               <button
                 onClick={scrollToSection}
-                className="z-20 lg:text-3xl text-gray-900 md:text-2xl text-xl bg-slate-100 rounded-sm p-3 pt-2 pb-2 mt-8 hover:text-purple-800 transition-all duration-500 "
+                className="z-20 lg:text-3xl text-slate-50 md:text-2xl text-xl border-slate-100 hover:border-purple-900 border-2 rounded-sm p-3 pt-2 pb-2 mt-8 hover:text-[#a150de] transition-all duration-500 "
               >
                 Learn About Me
               </button>
@@ -264,42 +264,42 @@ export default function Home() {
               projectTitle="Identibear"
               bodyText="Identibear is a memory companion for dementia and prognopasia patients! Using a CNN, it detects who the user is talking to and outputs details in an earbud. It's also easily customizable on a web app."
               dateText="Made at Hack The 6ix 2024"
-              imageURL="/HackTheSkiesLogoBlue.png"
+              imageURL="/IdentibearLogo.png"
               linkURL="https://devpost.com/software/identibear-your-memory-companion"
             />
             <ProjectBox
               projectTitle="Cycle"
-              bodyText="Cycle is an Android Studio App that lets the user cycle through the day, leaving notes, to-do lists, and alarms!"
+              bodyText="Cycle is an Android Studio (Java) App that lets the user cycle through the day, leaving notes, to-do lists, and alarms! The user can also look at the entire day at once and view their edits."
               dateText="Made June 2024"
-              imageURL="/HackTheSkiesLogoBlue.png"
+              imageURL="/CycleImage.jpg"
               linkURL="https://github.com/Solaror0/Cycle_APP/tree/main"
             />
             <ProjectBox
               projectTitle="Air DJ"
               bodyText="Air DJ is an instrument that allows the user to control Ableton Midi Values using pressure sensors, and change the pitch through an ultrasonic sensor distance, creating a DJ experience in the air!"
               dateText="Made at Hack The North 2023"
-              imageURL="/HackTheSkiesLogoBlue.png"
+              imageURL="/airDJ.jpg"
               linkURL="https://devpost.com/software/air-dj-2r3nw9"
             />
             <ProjectBox
               projectTitle="Handibrake"
               bodyText="A mission statement: a girl in India suffering from leprosy uses her bike to travel through the roads of Mumbai. Create an accessible way of braking to allow her to safely travel. Watch the video linked below!"
               dateText="Made December 2023"
-              imageURL="/HackTheSkiesLogoBlue.png"
+              imageURL="/EngDesGlove.png"
               linkURL="https://www.youtube.com/watch?v=alz2EUx-i6A"
             />
             <ProjectBox
               projectTitle="EmpowerU"
               bodyText="A web app allowing employers and employees to connect, prioritizing workflow, transparancy, and boasting built-in mental health functions for employees. EmpowerU goes beyond the standard work app with its accessible usage and design."
               dateText="Made at Hack the 6ix 2023"
-              imageURL="/HackTheSkiesLogoBlue.png"
+              imageURL="/EmpowerUPng.png"
               linkURL="https://devpost.com/software/empoweru-dwiz25"
             />
             <ProjectBox
               projectTitle="Penguin ISU"
-              bodyText="An Independent Study Unit on penguins! A web app that walks the user through Emperor Penguins with information and minigames!"
+              bodyText="An Independent Study Unit on penguins! Made with TailwindCSS & Flask, this is a web app that walks the user through Emperor Penguins with information and minigames."
               dateText="Made December 2024"
-              imageURL="/HackTheSkiesLogoBlue.png"
+              imageURL="/highResPengCardBackground.png"
               linkURL="https://penguinisu.vercel.app/"
             />
           </div>

@@ -26,6 +26,27 @@ export default function Home() {
     "An Aspiring Engineer",
   ];
 
+  function HeaderComponent() {
+    return (
+      <div className="z-40 w-full bg-opacity-10 h-fit fixed top-0 gap-0 text-slate-300 backdrop-blur-lg bg-purple-950">
+        <div className=" inline float-right p-4 pr-20 font-ttChoc text-2xl transition-all hover:text-purple-900">
+          Contact
+        </div>
+        <div
+          onClick={scrollToProjects}
+          className="inline float-right p-4 font-ttChoc text-2xl transition-all hover:text-purple-900"
+        >
+          Projects
+        </div>
+        <div
+          onClick={scrollToSection}
+          className="inline float-right p-4 font-ttChoc text-2xl transition-all hover:text-purple-900"
+        >
+          About
+        </div>
+      </div>
+    );
+  }
   function TitleSwitch() {
     const [index, setIndex] = useState(0);
 
@@ -43,12 +64,21 @@ export default function Home() {
   }
 
   const targetRef = useRef<HTMLDivElement>(null);
+  const projectSectionRef = useRef<HTMLDivElement>(null);
   const scrollToSection = () => {
     if (targetRef.current) {
       targetRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
+  const scrollToProjects = () => {
+    if (projectSectionRef.current) {
+      projectSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   function SkillBox(props: { skillText: string | number }) {
     return (
       <div className="w-fit h-fit text-gray-900 bg-slate-100 rounded-md px-2 m-0 py-1 hover:py-2 hover:px-3 transition-all">
@@ -101,6 +131,7 @@ export default function Home() {
   return (
     <div>
       <main className="flex min-h-screen flex-col items-center p-12 to-[#191024] via-[#150723] from-[#221331] bg-gradient-to-b  z-10">
+        <HeaderComponent />
         <div className="h-screen max-h-screen">
           <div className="w-full max-w-5xl h-full items-center justify-between text-center pt-36 font-ttChoc">
             <div className="text-center text-slate-50 text-4xl 2xl:text-9xl xl:text-9xl lg:text-8xl md:text-7xl pt-10 font-ttChoc">
@@ -200,7 +231,10 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="p-4 pl-6 text-3xl text-gray-900 font-ttChoc text-right hover:text-purple-800 transition-colors duration-500">
+              <div
+                onClick={scrollToProjects}
+                className="p-4 pl-6 text-3xl text-gray-900 font-ttChoc text-right hover:text-purple-800 transition-colors duration-500"
+              >
                 go to My Projects
               </div>
             </div>
@@ -245,10 +279,10 @@ export default function Home() {
         </div>
 
         <div
-          // ref={projectRef}
-          className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-20 font-semibold text-white"
+          ref={projectSectionRef}
+          className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-32 font-semibold text-white"
         >
-          <div className="pt-8 p-4 pl-6 text-6xl pb-12 text-slate-200 font-ttChoc">
+          <div className="pt-20 p-4 pl-6 text-6xl pb-12 text-slate-200 font-ttChoc">
             Projects
           </div>
 
@@ -303,6 +337,13 @@ export default function Home() {
               linkURL="https://penguinisu.vercel.app/"
             />
           </div>
+        </div>
+
+        <div className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-16 font-semibold text-white">
+          <div className="pt-20 p-4 pl-6 text-6xl pb-12 text-slate-200 font-ttChoc">
+            Contact Me!
+          </div>
+          <div className="table"></div>
         </div>
       </main>
     </div>

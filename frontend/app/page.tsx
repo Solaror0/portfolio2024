@@ -29,7 +29,10 @@ export default function Home() {
   function HeaderComponent() {
     return (
       <div className="hidden md:block z-40 w-full bg-opacity-10 h-fit fixed top-0 gap-0 text-slate-300 backdrop-blur-lg bg-purple-950">
-        <div className=" inline float-right p-4 pr-20 font-ttChoc text-2xl transition-all hover:text-purple-900">
+        <div
+          onClick={scrollToContacts}
+          className=" inline float-right p-4 pr-20 font-ttChoc text-2xl transition-all hover:text-purple-900"
+        >
           Contact
         </div>
         <div
@@ -65,6 +68,7 @@ export default function Home() {
 
   const targetRef = useRef<HTMLDivElement>(null);
   const projectSectionRef = useRef<HTMLDivElement>(null);
+  const contactSectionRef = useRef<HTMLDivElement>(null);
   const scrollToSection = () => {
     if (targetRef.current) {
       targetRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -79,6 +83,16 @@ export default function Home() {
       });
     }
   };
+
+  const scrollToContacts = () => {
+    if (contactSectionRef.current) {
+      contactSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   function SkillBox(props: { skillText: string | number }) {
     return (
       <div className="w-fit h-fit text-gray-900 bg-slate-100 rounded-md px-2 m-0 py-1 hover:py-2 hover:px-3 transition-all">
@@ -440,7 +454,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-16 font-semibold text-white">
+        <div
+          ref={contactSectionRef}
+          className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-16 font-semibold text-white"
+        >
           <div className="pt-20 p-4 pl-6 text-6xl pb-12 text-slate-200 font-ttChoc">
             Contact Me!
           </div>

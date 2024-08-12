@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "nodemailer": "^6.9.14",
     "particles.js": "^2.0.0"
   },
   "devDependencies": {

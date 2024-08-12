@@ -28,7 +28,7 @@ export default function Home() {
 
   function HeaderComponent() {
     return (
-      <div className="z-40 w-full bg-opacity-10 h-fit fixed top-0 gap-0 text-slate-300 backdrop-blur-lg bg-purple-950">
+      <div className="hidden md:block z-40 w-full bg-opacity-10 h-fit fixed top-0 gap-0 text-slate-300 backdrop-blur-lg bg-purple-950">
         <div className=" inline float-right p-4 pr-20 font-ttChoc text-2xl transition-all hover:text-purple-900">
           Contact
         </div>
@@ -127,6 +127,107 @@ export default function Home() {
     );
   }
 
+  function ContactForm() {
+    const [formData, setFormData] = useState({
+      name: "",
+      subject: "",
+      email: "",
+      body: "",
+    });
+
+    const handleChange = (e: { target: { name: any; value: any } }) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    };
+
+    const handleSubmit = async (e: { preventDefault: () => void }) => {
+      e.preventDefault();
+
+      const response = await fetch("/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Handle successful submission (e.g., show a thank you message)
+        alert("Thank you for your message!");
+      } else {
+        // Handle error
+        alert("Something went wrong. Please try again.");
+      }
+    };
+
+    return (
+      <form onSubmit={handleSubmit}>
+        <div className="grid p-8 gap-3 grid-cols-2">
+          <div className="col-span-2 md:col-span-1">
+            <label className="block text-sm font-medium text-slate-200">
+              Name
+            </label>
+            <input
+              onChange={handleChange}
+              type="text"
+              name="name"
+              value={formData.name}
+              className="mt-1 block w-full p-2 border border-gray-800 rounded-md bg-[#382949] text-slate-200 font-normal"
+              required
+            />
+          </div>
+          <div className="col-span-2 md:col-span-1">
+            <label className="block text-sm font-medium text-slate-200">
+              Email
+            </label>
+            <input
+              name="email"
+              onChange={handleChange}
+              placeholder=""
+              value={formData.email}
+              type="email"
+              className="mt-1 block w-full p-2 border border-gray-800 rounded-md bg-[#382949] text-slate-200 font-normal"
+              required
+            />
+          </div>
+          <div className="col-span-2">
+            <label className="block text-sm font-medium text-slate-200">
+              Subject
+            </label>
+            <input
+              name="subject"
+              onChange={handleChange}
+              value={formData.subject}
+              type="text"
+              className="mt-1 block w-full p-2 border border-gray-800 rounded-md bg-[#382949] text-slate-200 font-normal"
+              required
+            />
+          </div>
+          <div className="col-span-2">
+            <label className="block text-sm font-medium text-slate-200 col-span-3 h-fit overflow-auto">
+              Body
+            </label>
+            <textarea
+              name="body"
+              value={formData.body}
+              placeholder="Enter your text here..."
+              onChange={handleChange}
+              className="mt-1 block w-full p-2 border h-48 border-gray-800 rounded-md bg-[#382949] text-slate-200 font-normal"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <button className="w-fit p-2 px-6 text-xl transition-all duration-500 border-2 border-slate-200 hover:bg-slate-200 rounded-sm  font-ttChoc text-slate-200 hover:text-gray-900">
+              Send
+            </button>
+          </div>
+        </div>
+      </form>
+    );
+  }
   // RETURN SECTION
   return (
     <div>
@@ -343,7 +444,7 @@ export default function Home() {
           <div className="pt-20 p-4 pl-6 text-6xl pb-12 text-slate-200 font-ttChoc">
             Contact Me!
           </div>
-          <div className="table"></div>
+          <ContactForm />
         </div>
       </main>
     </div>

@@ -245,7 +245,7 @@ export default function Home() {
   // RETURN SECTION
   return (
     <div>
-      <main className="flex min-h-screen flex-col items-center p-12 to-[#191024] via-[#150723] from-[#221331] bg-gradient-to-b  z-10">
+      <main className="flex min-h-screen flex-col items-center p-4 md:p-12 to-[#191024] via-[#150723] from-[#221331] bg-gradient-to-b  z-10">
         <HeaderComponent />
         <div className="h-screen max-h-screen">
           <div className="w-full max-w-5xl h-full items-center justify-between text-center pt-36 font-ttChoc">
@@ -458,7 +458,7 @@ export default function Home() {
           ref={contactSectionRef}
           className="w-full max-w-5xl min-h-screen h-fit items-center justify-between mt-16 font-semibold text-white"
         >
-          <div className="pt-20 p-4 pl-6 text-6xl pb-12 text-slate-200 font-ttChoc">
+          <div className="pt-20 p-4 pl-6 text-5xl md:text-6xl pb-12 text-slate-200 font-ttChoc">
             Contact Me!
           </div>
           <ContactForm />

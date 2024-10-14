@@ -9,10 +9,12 @@ import {
   ReactNode,
   ReactPortal,
 } from "react";
+
 import axios from "axios";
 import Image from "next/image";
 //import ParticlesBackground from "../components/ParticlesBackground";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const ParticlesBackground = dynamic(
   () => import("../components/ParticlesBackground"),
@@ -245,6 +247,18 @@ export default function Home() {
   // RETURN SECTION
   return (
     <div>
+      <Head>
+        <title>Jun Nur Mustaqeem - Portfolio </title>
+        <meta
+          name="description"
+          content="Hey! I'm Jun Nur Mustaqeem a high school student in Canada. Welcome to my portfolio!"
+        />
+        <meta
+          name="keywords"
+          content="Jun Nur, Mustaqeem, Portfolio, Jun, Nur"
+        />
+      </Head>
+
       <main className="flex min-h-screen flex-col items-center p-4 md:p-12 to-[#191024] via-[#150723] from-[#221331] bg-gradient-to-b  z-10">
         <HeaderComponent />
         <div className="h-screen max-h-screen">

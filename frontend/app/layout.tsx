@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "../public/fonts.css";
+
 import type { AppProps } from "next/app";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jun Nur Mustaqeem's Portfolio!",
-  description: "Created with Next.js",
+  title: "Jun Nur Mustaqeem - Portfolio!",
+  description:
+    "Hey! I'm Jun Nur Mustaqeem, a high school student. Welcome to my portfolio!",
   openGraph: {
     type: "website",
     url: "https://junnur.vercel.app",
